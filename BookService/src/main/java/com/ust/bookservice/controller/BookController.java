@@ -6,6 +6,7 @@ import com.ust.bookservice.domain.Book;
 import com.ust.bookservice.domain.BookDTO;
 import com.ust.bookservice.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,11 @@ public class BookController {
 
     @Autowired
     private AuthorClient authorClient;
+
+    @GetMapping("/health")
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("Book service is up and running");
+    }
 
     @GetMapping("/books")
     public List<BookDTO> getAllBooks() {
