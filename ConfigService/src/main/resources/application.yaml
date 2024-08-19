@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ashish-panicker/books_author_microservices-config
+          uri: https://github.com/zebanaourin/BA_microservices_config
           clone-on-start: true
 logging:
   pattern:
