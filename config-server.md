@@ -71,6 +71,8 @@ public class ConfigClientApplication {
 
 ```yaml
 spring:
+  config:
+    import: configserver:http://localhost:8888
   application:
     name: config-client
   cloud:
